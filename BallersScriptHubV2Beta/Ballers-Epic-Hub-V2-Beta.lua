@@ -27,9 +27,14 @@ local UICorner_6 = Instance.new("UICorner")
 local LocalPlayersFrame = Instance.new("Frame")
 local KickAllButton = Instance.new("TextButton")
 local UICorner_7 = Instance.new("UICorner")
-local FlyButton = Instance.new("TextButton")
+local TPButton = Instance.new("TextButton")
 local UICorner_8 = Instance.new("UICorner")
+local TPTextBox = Instance.new("TextBox")
+local FlyButton = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
 local ScriptsFrame = Instance.new("Frame")
+local MasterHandButton = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
 local HubsUIsFrame = Instance.new("Frame")
 local MiscFrame = Instance.new("Frame")
 local HomeFrame = Instance.new("Frame")
@@ -40,7 +45,7 @@ local TextLabel_5 = Instance.new("TextLabel")
 local TextLabel_6 = Instance.new("TextLabel")
 local TextButton = Instance.new("TextButton")
 local TextButton_2 = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
+local UICorner_11 = Instance.new("UICorner")
 
 -- Properties
 
@@ -64,7 +69,7 @@ TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(6.215393e-08, 0, 0, 0)
 TextLabel.Size = UDim2.new(0.999999881, 0, 0.136523589, 0)
 TextLabel.Font = Enum.Font.FredokaOne
-TextLabel.Text = "Ballers Epic Hub V2"
+TextLabel.Text = "Ballers Epic Hub V2.5"
 TextLabel.TextColor3 = Color3.new(1, 1, 1)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14
@@ -165,6 +170,7 @@ LocalPlayersFrame.BorderColor3 = Color3.new(0, 0, 0)
 LocalPlayersFrame.BorderSizePixel = 0
 LocalPlayersFrame.Position = UDim2.new(0.264765769, 0, 0.136523589, 0)
 LocalPlayersFrame.Size = UDim2.new(0.735234201, 0, 0.863476336, 0)
+LocalPlayersFrame.Visible = false
 
 KickAllButton.Name = "KickAllButton"
 KickAllButton.Parent = LocalPlayersFrame
@@ -182,6 +188,38 @@ KickAllButton.TextWrapped = true
 
 UICorner_7.Parent = KickAllButton
 
+TPButton.Name = "TPButton"
+TPButton.Parent = LocalPlayersFrame
+TPButton.BackgroundColor3 = Color3.new(0, 1, 0)
+TPButton.BorderColor3 = Color3.new(0, 0, 0)
+TPButton.BorderSizePixel = 0
+TPButton.Position = UDim2.new(0.63610059, 0, 0.0338787921, 0)
+TPButton.Size = UDim2.new(0.310175687, 0, 0.130266264, 0)
+TPButton.Font = Enum.Font.FredokaOne
+TPButton.Text = "TP to Player"
+TPButton.TextColor3 = Color3.new(0, 0, 0)
+TPButton.TextScaled = true
+TPButton.TextSize = 14
+TPButton.TextWrapped = true
+
+UICorner_8.Parent = TPButton
+
+TPTextBox.Name = "TPTextBox"
+TPTextBox.Parent = LocalPlayersFrame
+TPTextBox.BackgroundColor3 = Color3.new(0.203922, 0.203922, 0.203922)
+TPTextBox.BorderColor3 = Color3.new(0, 0, 0)
+TPTextBox.BorderSizePixel = 0
+TPTextBox.Position = UDim2.new(0.597854137, 0, 0.177891403, 0)
+TPTextBox.Size = UDim2.new(0.383738905, 0, 0.161632881, 0)
+TPTextBox.Font = Enum.Font.SourceSans
+TPTextBox.MultiLine = true
+TPTextBox.PlaceholderText = "Players name you want to tp to here"
+TPTextBox.Text = ""
+TPTextBox.TextColor3 = Color3.new(0, 0, 0)
+TPTextBox.TextScaled = true
+TPTextBox.TextSize = 14
+TPTextBox.TextWrapped = true
+
 FlyButton.Name = "FlyButton"
 FlyButton.Parent = LocalPlayersFrame
 FlyButton.BackgroundColor3 = Color3.new(0, 1, 0)
@@ -196,7 +234,7 @@ FlyButton.TextScaled = true
 FlyButton.TextSize = 14
 FlyButton.TextWrapped = true
 
-UICorner_8.Parent = FlyButton
+UICorner_9.Parent = FlyButton
 
 ScriptsFrame.Name = "Scripts Frame"
 ScriptsFrame.Parent = Frame
@@ -205,6 +243,23 @@ ScriptsFrame.BorderColor3 = Color3.new(0, 0, 0)
 ScriptsFrame.BorderSizePixel = 0
 ScriptsFrame.Position = UDim2.new(0.264765769, 0, 0.134796232, 0)
 ScriptsFrame.Size = UDim2.new(0.735234201, 0, 0.865203738, 0)
+ScriptsFrame.Visible = false
+
+MasterHandButton.Name = "MasterHandButton"
+MasterHandButton.Parent = ScriptsFrame
+MasterHandButton.BackgroundColor3 = Color3.new(0, 1, 0)
+MasterHandButton.BorderColor3 = Color3.new(0, 0, 0)
+MasterHandButton.BorderSizePixel = 0
+MasterHandButton.Position = UDim2.new(0.0521500595, 0, 0.0338787921, 0)
+MasterHandButton.Size = UDim2.new(0.310175687, 0, 0.130266264, 0)
+MasterHandButton.Font = Enum.Font.FredokaOne
+MasterHandButton.Text = "Master Hand [Might Not Work]"
+MasterHandButton.TextColor3 = Color3.new(0, 0, 0)
+MasterHandButton.TextScaled = true
+MasterHandButton.TextSize = 14
+MasterHandButton.TextWrapped = true
+
+UICorner_10.Parent = MasterHandButton
 
 HubsUIsFrame.Name = "Hubs/UI's Frame"
 HubsUIsFrame.Parent = Frame
@@ -212,7 +267,8 @@ HubsUIsFrame.BackgroundColor3 = Color3.new(0.0666667, 0.0666667, 0.0666667)
 HubsUIsFrame.BorderColor3 = Color3.new(0, 0, 0)
 HubsUIsFrame.BorderSizePixel = 0
 HubsUIsFrame.Position = UDim2.new(0.264765769, 0, 0.134796232, 0)
-HubsUIsFrame.Size = UDim2.new(0.735234201, 0, 0.865203798, 0)
+HubsUIsFrame.Size = UDim2.new(0.735234201, 0, 0.865203738, 0)
+HubsUIsFrame.Visible = false
 
 MiscFrame.Name = "Misc Frame"
 MiscFrame.Parent = Frame
@@ -220,7 +276,8 @@ MiscFrame.BackgroundColor3 = Color3.new(0.0666667, 0.0666667, 0.0666667)
 MiscFrame.BorderColor3 = Color3.new(0, 0, 0)
 MiscFrame.BorderSizePixel = 0
 MiscFrame.Position = UDim2.new(0.264765769, 0, 0.134796232, 0)
-MiscFrame.Size = UDim2.new(0.735234201, 0, 0.865203798, 0)
+MiscFrame.Size = UDim2.new(0.735234201, 0, 0.865203738, 0)
+MiscFrame.Visible = false
 
 HomeFrame.Name = "Home Frame"
 HomeFrame.Parent = Frame
@@ -252,7 +309,7 @@ TextLabel_3.BorderSizePixel = 0
 TextLabel_3.Position = UDim2.new(0, 0, 0.163043484, 0)
 TextLabel_3.Size = UDim2.new(1, 0, 0.279248655, 0)
 TextLabel_3.Font = Enum.Font.FredokaOne
-TextLabel_3.Text = "V2 Fixed Gui Not Working At All. "
+TextLabel_3.Text = "V2.5 Fixed Some Minor Bugs Like Undraggable Gui"
 TextLabel_3.TextColor3 = Color3.new(1, 1, 1)
 TextLabel_3.TextScaled = true
 TextLabel_3.TextSize = 14
@@ -267,7 +324,7 @@ TextLabel_4.BorderSizePixel = 0
 TextLabel_4.Position = UDim2.new(0, 0, 0.442028999, 0)
 TextLabel_4.Size = UDim2.new(1, 0, 0.279248655, 0)
 TextLabel_4.Font = Enum.Font.FredokaOne
-TextLabel_4.Text = "V2 More Sections/Tabs!"
+TextLabel_4.Text = "V2.5 More Stuff In The Tabs"
 TextLabel_4.TextColor3 = Color3.new(1, 1, 1)
 TextLabel_4.TextScaled = true
 TextLabel_4.TextSize = 14
@@ -282,7 +339,7 @@ TextLabel_5.BorderSizePixel = 0
 TextLabel_5.Position = UDim2.new(0, 0, 0.717391312, 0)
 TextLabel_5.Size = UDim2.new(1, 0, 0.105335623, 0)
 TextLabel_5.Font = Enum.Font.FredokaOne
-TextLabel_5.Text = "V2 Added Thats It I think For Now"
+TextLabel_5.Text = "V2.5 Used A Different GUI To Lua Plugin I Think"
 TextLabel_5.TextColor3 = Color3.new(1, 1, 1)
 TextLabel_5.TextScaled = true
 TextLabel_5.TextSize = 14
@@ -332,11 +389,11 @@ TextButton_2.TextSize = 14
 TextButton_2.TextStrokeTransparency = 0
 TextButton_2.TextWrapped = true
 
-UICorner_9.Parent = TextButton_2
+UICorner_11.Parent = TextButton_2
 
 -- Scripts
 
-local function SPYYGET_fake_script() -- HomeButton.LocalScript 
+local function UKMEWNC_fake_script() -- HomeButton.LocalScript 
 	local script = Instance.new('LocalScript', HomeButton)
 
 	local button = script.Parent
@@ -367,8 +424,8 @@ local function SPYYGET_fake_script() -- HomeButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(SPYYGET_fake_script)()
-local function NPGTLKR_fake_script() -- LocalPlayersButton.LocalScript 
+coroutine.wrap(UKMEWNC_fake_script)()
+local function RFBBCKD_fake_script() -- LocalPlayersButton.LocalScript 
 	local script = Instance.new('LocalScript', LocalPlayersButton)
 
 	local button = script.Parent
@@ -399,8 +456,8 @@ local function NPGTLKR_fake_script() -- LocalPlayersButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(NPGTLKR_fake_script)()
-local function NUJCD_fake_script() -- ScriptsButton.LocalScript 
+coroutine.wrap(RFBBCKD_fake_script)()
+local function RFRTI_fake_script() -- ScriptsButton.LocalScript 
 	local script = Instance.new('LocalScript', ScriptsButton)
 
 	local button = script.Parent
@@ -431,8 +488,8 @@ local function NUJCD_fake_script() -- ScriptsButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(NUJCD_fake_script)()
-local function MVRYL_fake_script() -- HubsUIsButton.LocalScript 
+coroutine.wrap(RFRTI_fake_script)()
+local function XTDPY_fake_script() -- HubsUIsButton.LocalScript 
 	local script = Instance.new('LocalScript', HubsUIsButton)
 
 	local button = script.Parent
@@ -463,8 +520,8 @@ local function MVRYL_fake_script() -- HubsUIsButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(MVRYL_fake_script)()
-local function SFUULUW_fake_script() -- MiscSettingsButton.LocalScript 
+coroutine.wrap(XTDPY_fake_script)()
+local function BFNTRA_fake_script() -- MiscSettingsButton.LocalScript 
 	local script = Instance.new('LocalScript', MiscSettingsButton)
 
 	local button = script.Parent
@@ -495,8 +552,8 @@ local function SFUULUW_fake_script() -- MiscSettingsButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(SFUULUW_fake_script)()
-local function BTCX_fake_script() -- KickAllButton.LocalScript 
+coroutine.wrap(BFNTRA_fake_script)()
+local function LSPWPWJ_fake_script() -- KickAllButton.LocalScript 
 	local script = Instance.new('LocalScript', KickAllButton)
 
 	-- Get the GUI button
@@ -508,16 +565,32 @@ local function BTCX_fake_script() -- KickAllButton.LocalScript
 		local players = game.Players:GetPlayers()
 	
 		-- Loop through each player
-		for i,v in ipairs(game.Players:GetPlayers()) do
-			v:Kick("You have been kicked from the game. Reason: Banned For 1 Day Nah just kidding you were just kicked")
+		for _, player in ipairs(players) do
+			
+			player:Kick("You have been kicked from the game. Reason: Banned For 1 Day Nah just kidding you were just kicked")
 		end
 	end
 	
 	-- Connect the function to the GUI button's Click event
 	guiButton.MouseButton1Click:Connect(kickPlayers)
 end
-coroutine.wrap(BTCX_fake_script)()
-local function RWZDFAX_fake_script() -- FlyButton.LocalScript 
+coroutine.wrap(LSPWPWJ_fake_script)()
+local function TTWC_fake_script() -- TPButton.LocalScript 
+	local script = Instance.new('LocalScript', TPButton)
+
+	local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local pl2 = script.Parent.Parent.TPTextBox.Text
+	local human = game.Players.LocalPlayer.Character.Humanoid
+	human:ChangeState(Enum.HumanoidStateType.Jumping)
+	
+	pl.CFrame = game.Players[pl2].Character.HumanoidRootPart.CFrame
+	
+	wait(0.5)
+	
+	print("Done!")
+end
+coroutine.wrap(TTWC_fake_script)()
+local function KULCAOD_fake_script() -- FlyButton.LocalScript 
 	local script = Instance.new('LocalScript', FlyButton)
 
 	local player = game.Players.LocalPlayer
@@ -540,8 +613,8 @@ local function RWZDFAX_fake_script() -- FlyButton.LocalScript
 	
 	
 end
-coroutine.wrap(RWZDFAX_fake_script)()
-local function CTPARTG_fake_script() -- Frame.DragScript 
+coroutine.wrap(KULCAOD_fake_script)()
+local function ESPZIW_fake_script() -- Frame.DragScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
@@ -584,8 +657,8 @@ local function CTPARTG_fake_script() -- Frame.DragScript
 	end)
 	
 end
-coroutine.wrap(CTPARTG_fake_script)()
-local function MOQUEM_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(ESPZIW_fake_script)()
+local function BHTZRW_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local button = script.Parent
@@ -595,8 +668,8 @@ local function MOQUEM_fake_script() -- TextButton.LocalScript
 		frame.Visible = false
 	end)
 end
-coroutine.wrap(MOQUEM_fake_script)()
-local function ATKPV_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(BHTZRW_fake_script)()
+local function RBKGKAV_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	local button = script.Parent
@@ -607,4 +680,4 @@ local function ATKPV_fake_script() -- TextButton_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(ATKPV_fake_script)()
+coroutine.wrap(RBKGKAV_fake_script)()
