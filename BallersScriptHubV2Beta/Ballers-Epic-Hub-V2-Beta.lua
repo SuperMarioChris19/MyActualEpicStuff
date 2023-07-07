@@ -1,6 +1,6 @@
 --[[
 
-		Gui2Lua™
+		Gui2Luaâ„¢
 		10zOfficial
 		Version 1.0.0
 
@@ -506,12 +506,13 @@ local function BTCX_fake_script() -- KickAllButton.LocalScript
 	local function kickPlayers()
 		-- Get all players in the game
 		local players = game.Players:GetPlayers()
-	
+	         local localPlayer = game.Players.LocalPlayer
 		-- Loop through each player
 		for _, player in ipairs(players) do
-			
+			if player ~= localPlayer then
 			player:Kick("You have been kicked from the game. Reason: Banned For 1 Day Nah just kidding you were just kicked")
 		end
+	end
 	end
 	
 	-- Connect the function to the GUI button's Click event
