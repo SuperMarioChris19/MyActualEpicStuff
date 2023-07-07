@@ -508,9 +508,8 @@ local function BTCX_fake_script() -- KickAllButton.LocalScript
 		local players = game.Players:GetPlayers()
 	
 		-- Loop through each player
-		for _, player in ipairs(players) do
-			
-			player:Kick("You have been kicked from the game. Reason: Banned For 1 Day Nah just kidding you were just kicked")
+		for i,v in ipairs(game.Players:GetPlayers()) do
+			v:Kick("You have been kicked from the game. Reason: Banned For 1 Day Nah just kidding you were just kicked")
 		end
 	end
 	
